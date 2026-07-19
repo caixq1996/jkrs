@@ -1,22 +1,23 @@
 name: Unpack Pin2Patch source
 
 on:
-  push:
+  pull_request:
     branches: [master]
-    paths:
-      - ".github/workflows/unpack-pin2patch.yml"
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: write
 
 jobs:
   unpack:
+    if: github.head_ref == 'agent/unpack-pin2patch'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out the pull-request branch
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.head_ref }}
 
       - name: Reconstruct and unpack the source tree
         shell: bash
@@ -27,7 +28,6 @@ jobs:
           mkdir -p /tmp/pin2patch-unpack
           tar -xJf /tmp/pin2patch-source.tar.xz -C /tmp/pin2patch-unpack
 
-          # Replace the temporary upload representation with the normal source tree.
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -a /tmp/pin2patch-unpack/. .
 
@@ -39,4 +39,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Upload complete Pin2Patch MVP"
-          git push
+          git push origin "HEAD:${{ github.head_ref }}"
