@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+.pin2patch/
+.env
+.env.*
+*.log
+.DS_Store

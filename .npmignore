@@ -1,0 +1,7 @@
+tests/
+fixtures/
+demo/
+docs/
+scripts/
+.devpost-hackathon-state.json
+devpost-submission.md
