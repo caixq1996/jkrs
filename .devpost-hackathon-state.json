@@ -1,0 +1,42 @@
+{
+  "event": {
+    "slug": "openai",
+    "name": "OpenAI Build Week"
+  },
+  "rules_acknowledged": true,
+  "participant": {
+    "display_name": "Allen Cai"
+  },
+  "project": {
+    "name": "Pin2Patch",
+    "summary": "Turn Figma comment pins into agent-ready tasks and tested code patches from the terminal.",
+    "devpost_project_id": 1351727,
+    "devpost_url": "https://devpost.com/software/pin2patch"
+  },
+  "learning": {
+    "status": "completed",
+    "current_step": "build",
+    "completed_steps": [
+      "onboard",
+      "scope",
+      "prd",
+      "spec",
+      "checklist",
+      "build"
+    ],
+    "plan_file": "docs/hackathon-build/scope.md",
+    "checklist_file": "docs/hackathon-build/checklist.md"
+  },
+  "completed_stages": [
+    "start",
+    "rules",
+    "resources",
+    "prepare-submission"
+  ],
+  "current_stage": "prepare-submission",
+  "next_command": "prepare-submission",
+  "submission": {
+    "status": "drafting",
+    "draft_file": "devpost-submission.md"
+  }
+}

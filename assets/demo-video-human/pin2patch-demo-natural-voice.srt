@@ -1,0 +1,39 @@
+1
+00:00:00,180 --> 00:00:10,817
+Design feedback is valuable, but handing it to a coding agent is still manual. Pin to Patch turns a Figma comment pin into a tested code patch, directly from the terminal.
+
+2
+00:00:11,177 --> 00:00:26,238
+A developer normally opens Figma, finds the thread and target frame, copies the comments, captures a screenshot, restates the acceptance criteria, and later returns to report the result. That handoff is repetitive, lossy, and hard to audit.
+
+3
+00:00:26,598 --> 00:00:39,636
+With Pin to Patch, one command pulls the unresolved thread and its pinned node. This demo uses realistic fixtures, so judges can run it without a Figma account. The live Figma transport follows the same interface.
+
+4
+00:00:39,996 --> 00:00:53,603
+The command writes task dot M D for people and agents, versioned task dot J S O N for automation, and node dot P N G for visual context. Review text is clearly marked as untrusted external input.
+
+5
+00:00:53,963 --> 00:01:11,332
+Codex with G P T five point six handles the reasoning. It reads the task and screenshot, finds the smallest relevant code surface, implements the behavior, runs focused checks, and writes the result. Pin to Patch keeps retrieval, state, and write-back deterministic.
+
+6
+00:01:11,692 --> 00:01:25,598
+The checkout example begins in a real failing state. Mobile padding is wrong, the price stays beside the title, and the existing secondary button style is not reused. The desktop layout already passes and must remain unchanged.
+
+7
+00:01:25,958 --> 00:01:39,232
+After Codex applies the patch, all four acceptance checks pass. The agent did more than generate code: it converted one specific design review into a verified, minimal change while preserving unrelated behavior.
+
+8
+00:01:39,592 --> 00:01:54,255
+Write-back is safe by default. Reply previews the message, maps a reply I D to the root Figma thread, and confirms that nothing was sent. A remote write requires the explicit send flag, and fixture tasks can never write remotely.
+
+9
+00:01:54,615 --> 00:02:09,221
+Judges can run the repository immediately: strict TypeScript checking, twenty automated tests in nine files, a production build, a package dry run, and a credential scan. The core workflow needs one fixture command and no secret token.
+
+10
+00:02:09,581 --> 00:02:23,678
+Pin to Patch closes a high-friction gap in agentic development: Figma feedback becomes agent-ready context, then a tested patch, then evidence in the original thread. From Figma comment to tested commit, without leaving the terminal.

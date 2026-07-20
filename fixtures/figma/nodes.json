@@ -1,0 +1,31 @@
+{
+  "name": "Pin2Patch Demo",
+  "nodes": {
+    "123:456": {
+      "document": {
+        "id": "123:456",
+        "name": "Checkout / Mobile",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        }
+      }
+    },
+    "123:789": {
+      "document": {
+        "id": "123:789",
+        "name": "Checkout / Icon",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 500,
+          "y": 0,
+          "width": 120,
+          "height": 120
+        }
+      }
+    }
+  }
+}

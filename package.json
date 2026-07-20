@@ -1,0 +1,54 @@
+{
+  "name": "pin2patch",
+  "version": "0.1.0",
+  "description": "Turn Figma comment pins into agent-ready tasks and tested code patches from the terminal.",
+  "type": "module",
+  "bin": {
+    "pin2patch": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test && npm run build",
+    "demo:reset": "node scripts/reset-demo.mjs",
+    "demo:test": "node --test demo/checkout-app/test/*.test.mjs"
+  },
+  "keywords": [
+    "figma",
+    "cli",
+    "codex",
+    "agent",
+    "developer-tools",
+    "design-review"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^14.0.0",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.14",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caixq1996/Pin2Patch.git"
+  },
+  "homepage": "https://github.com/caixq1996/Pin2Patch#readme",
+  "bugs": {
+    "url": "https://github.com/caixq1996/Pin2Patch/issues"
+  }
+}
