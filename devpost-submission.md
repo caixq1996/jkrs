@@ -245,27 +245,26 @@ After explicit approval, run `--send` against the real demo file and show the re
 | Country of Residence | Japan |
 | Category | Developer Tools |
 | Code Repository URL | https://github.com/caixq1996/Pin2Patch |
-| Judge Test URL / Instructions | Fixture mode works without credentials. The clean repository archive is verified; the GitHub repository still needs its final rename and full source upload. |
-| `/feedback` Codex Session ID | **Required and pending.** No valid Codex `/feedback` session identifier is exposed in this ChatGPT Work environment; do not substitute an invented conversation ID. |
+| Judge Test URL / Instructions | The complete public repository is available at the URL above. Fixture mode works without credentials; follow the Testing Instructions to generate and inspect the task artifacts and a dry-run reply with `sent: false`. |
+| `/feedback` Codex Session ID | **Required and pending.** Obtain the genuine identifier by running `/feedback` in the Codex task used for the publication and final handoff; do not substitute a conversation ID or another identifier. |
 | Developer Tool Installation / Platforms / Testing | Use the Testing Instructions above; Node.js 20+ on macOS, Linux, or Windows. |
 | Public Demo Video URL | The final 143.88-second neural-voice MP4 and SRT are complete locally; a public YouTube URL is still required. |
 
-## Remaining External Assets
+## Remaining External Requirements
 
-- Rename the GitHub repository from `jkrs` to `Pin2Patch` and upload the complete verified source archive.
 - Upload the finished 143.88-second demo to public YouTube and record the URL.
 - Provide the genuine `/feedback` Codex Session ID for the session where the core work was performed.
 
 ## Readiness
 
-**The local MVP, application narrative, thumbnail, and final neural-voice demo video are built and verified. The entry is blocked only by three externally owned submission values: a fully populated public GitHub repository, the public YouTube URL, and a genuine required `/feedback` Codex Session ID.**
+**The local MVP, application narrative, thumbnail, final neural-voice demo video, and complete public GitHub repository are built and verified. The entry is blocked only by the public YouTube URL and a genuine required `/feedback` Codex Session ID.**
 
 
-## Final Submit Attempt — 2026-07-19
+## Publication Progress — 2026-07-20
 
 The participant authorized final submission and provided:
 
 - Submitter Type: Individual
 - Country of Residence: Japan
 
-Final preflight remains stopped because the live form still needs a complete public code repository, a public YouTube demo URL, and the required genuine `/feedback` Codex Session ID. The neural-voice video, thumbnail, local MVP, quality gate, and security scan are complete; placeholders must not be sent.
+The repository was renamed to `caixq1996/Pin2Patch`, replaced with the complete verified source on `main`, kept public, and configured with `main` as the default branch. The Devpost public story and repository link were updated and saved. Final preflight remains stopped because the live form still needs a public YouTube demo URL and the required genuine `/feedback` Codex Session ID; placeholders must not be sent.
